@@ -1,0 +1,24 @@
+CMD-SUB           JSH Manual            CMD-SUB
+
+NAME
+    cmd-sub - command substitution in jsh
+
+SYNOPSIS
+    (`cmd-here`)
+
+DESCRIPTION
+    Use backquotes enclosed in parentheses to
+    use command substitution e.g. (`ls`) will
+    return a directory listing
+
+OPTIONS
+    cmd-here
+          The command to evaluate.
+
+AUTHOR
+    Raveneus Utopia (AKA Vidar Callahan)
+    <raveneus.utopia@gmail.com>
+    <developer.penedroid@gmail.com>
+
+
+Linux        Last change: JUNE 2016           2

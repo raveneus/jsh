@@ -1,0 +1,45 @@
+JSH               JSH Manuals               JSH
+NAME
+    jsh - the Java shell
+
+SYNOPSIS
+    jsh [-r resource-file]
+
+DESCRIPTION
+    jsh is the Java shell. The control structures
+    (if, else, loops, etc.) will use similar syntax
+    to Java. It is the one shell I know of that
+    implements classes. It is capable of command
+    substitution, variable subsitution, arithmetic,
+    resource file parsing, command execution,
+    regular expression matching, string
+    concatenation, string multiplication (yes,
+    that's a thing), and has extensive help
+    pages like this one. Soon, though, it will
+    be capable of much more.
+
+OPTIONS
+    -r resource-file
+         Parse the resource-file instead of STDIN
+
+FILES
+    ~/.jsh/.jshc
+          The config file for the current user.
+    ~/.jsh/.man/*
+          The manpages for jsh.
+    ~/.jsh/modules/*
+          The modules for jsh.
+    ~/.jsh/README.MD
+          The readme file for jsh. Similar to
+	  this, but worse.
+    ~/.jsh/LICENSE
+          The license allowing you to possess
+	  this awesome piece of software.
+
+AUTHOR
+    Raveneus Utopia (AKA Vidar Callahan)
+    <raveneus.utopia@gmail.com>
+    <developer.penedroid@gmail.com>
+
+
+Linux        Last change: JUNE 2016           2

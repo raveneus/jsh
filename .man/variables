@@ -1,0 +1,29 @@
+VARIABLES         JSH Manual          VARIABLES
+
+NAME
+    variables - usage of variables in jsh
+
+SYNOPSIS
+    (#[var])
+
+DESCRIPTION
+    Use a pound sign ("#") to denote getting
+    a variable's value. Always remember to
+    put the variable inside the the 
+    parentheses when checking its value or 
+    using it in tandem with other evaluation 
+    operators. However, you don't need to use
+    the parentheses when executing commands
+    with variables as arguments.
+
+OPTIONS
+    var
+          The variable's name.
+
+AUTHOR
+    Raveneus Utopia (AKA Vidar Callahan)
+    <raveneus.utopia@gmail.com>
+    <developer.penedroid@gmail.com>
+
+
+Linux        Last change: JUNE 2016           2

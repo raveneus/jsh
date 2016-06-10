@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 import os, sys, subprocess, cmd, ConfigParser, imp, pwd, time, re
 from socket import gethostname
 global var
@@ -8,13 +10,6 @@ global null
 true = "TRUE"
 null = "NULL"
 y = {}
-
-"""
-To-Do:
-prepend "jsh: " to all errors
-pipes
-redirection of stdout to files
-"""
 
 class customStderr(file):
     def __init__(self):
@@ -242,6 +237,7 @@ def init(var):
     parser.read(".jshc")
     var["MODULES"] = parser.get("jsh", "MODULES")
     var["HOME"] = parser.get("jsh", "HOME")
+    var["PATH"] += ":" + var["HOME"]
     try :
         tmp = parser.get("jsh", "PATH")
         var["PATH"] = sub(tmp)
@@ -338,7 +334,7 @@ class jsh(cmd.Cmd):
             self.var["status"] = "1"
             error("you may not set the value of #status.")
             return
-        if args_list[0].find("_dbg"):
+        if args_list[0].find("_dbg") != -1:
             self.var["status"] = "1"
             error("you may not set the value of " + args_list[0])
         if args_list[0][0] == "#":
@@ -351,9 +347,20 @@ class jsh(cmd.Cmd):
         print "var    variable to set"
         print "val    value to set the variable to"
         print "set: set the values of variables"
+    def resource(self):
+        if sys.argv[1] != "-r":
+            fatal_error("the first argument must be -r if you're going to use arguments.")
+        else:
+            f = open(sys.argv[2], "r")
+            for line in f.readlines():
+                print prompt(self.var["PROMPT"]) + line.rstrip()
+                self.onecmd(line)
+            f.close()
 def main(var):
     menu = init(var)
-    menu.cmdloop()
-
+    if len(sys.argv) == 1:
+        menu.cmdloop()
+    elif len(sys.argv) == 3:
+        menu.resource()
 if __name__ == '__main__':
     main(var)

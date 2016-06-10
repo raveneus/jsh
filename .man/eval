@@ -1,0 +1,45 @@
+EVAL              JSH Manual               EVAL
+
+NAME
+    eval - evaluation of jsh types
+
+SYNOPSIS
+    ([[@[num][var]op[num][var]][`cmd-here`][var][str]
+    [+][* num]
+    [@[num][var]op[num][var]][`cmd-here`][var][str]]
+    [~ expression])
+
+DESCRIPTION
+    Returns the evaluated expression.
+    A few things to note:
+    - "@" means perform arithmetic
+    - "~" means perform regular expression matching,
+    returning NULL if no match is found.
+    - "*" means perform string multiplication e.g.
+    (A * 5) => AAAAA
+    - "+" means string concatenation when outside the
+    "@" sign.
+    - A string can be quoted or unquoted
+    (unless the string has a space in it).
+
+OPTIONS
+    num
+          A number to operate on.
+    var
+          A variable to operate on.
+    op
+          A mathematical operation (+, -, *, /, %)
+    cmd-here
+          Command to perform command substitution on.
+    str
+          A string to operate on.
+    expression
+          A regular expression to match.
+
+AUTHOR
+    Raveneus Utopia (AKA Vidar Callahan)
+    <raveneus.utopia@gmail.com>
+    <developer.penedroid@gmail.com>
+
+
+Linux        Last change: JUNE 2016           2

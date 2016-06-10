@@ -1,0 +1,23 @@
+EXEC              JSH Manual               EXEC
+
+NAME
+    exec - executing commands in jsh
+
+SYNOPSIS
+    [cmd]
+
+DESCRIPTION
+    Just type the name of any command on the
+    #PATH, and it will be executed.
+
+OPTIONS
+    cmd
+          The command.
+
+AUTHOR
+    Raveneus Utopia (AKA Vidar Callahan)
+    <raveneus.utopia@gmail.com>
+    <developer.penedroid@gmail.com>
+
+
+Linux        Last change: JUNE 2016           2
